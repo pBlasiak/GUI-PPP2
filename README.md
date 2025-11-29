@@ -1,7 +1,6 @@
 # GUI-PPP2
-==========
 
-Taken from Byarne Stroustrop's website
+Taken from Byarne Stroustrup's website
 [PPP2](https://www.stroustrup.com/programming_support.html)
 
 -----------------------------------------------------------
