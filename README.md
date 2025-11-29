@@ -1,4 +1,11 @@
 # GUI-PPP2
+==========
+
+Taken from Byarne Stroustrop's website
+[PPP2](https://www.stroustrup.com/programming_support.html)
+
+-----------------------------------------------------------
+
 
 For MS Visual Studio 2017:
 
