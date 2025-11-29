@@ -5,6 +5,8 @@ Taken from Byarne Stroustrup's website
 
 -----------------------------------------------------------
 
+FLTK compilation on Windows
+*************************
 
 For MS Visual Studio 2017:
 
