@@ -1,4 +1,6 @@
-
+//TODO: 21.01.2026 
+// trzeba dodac header guard bo tak to sa problemy z kompilacja
+// jak sie dziedziczy po Simple_window
 #include "GUI.h"	// for Simple_window only (doesn't really belong in Window.h)
 
 using namespace Graph_lib;
@@ -35,3 +37,4 @@ private:
 	void next() { button_pushed = true; }
 
 };
+
