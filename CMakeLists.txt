@@ -1,43 +1,31 @@
-cmake_minimum_required(VERSION 3.20)
-project(ppp_gui_app LANGUAGES CXX)
+cmake_minimum_required(VERSION 3.12)
+project(GUI-PPP2-main CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# gdzie jest FLTKConfig.cmake
-set(FLTK_DIR "C:/Users/pblasiak/D/dev/fltk/install/CMake")
+# Automatyczne znalezienie FLTK w folderze obok projektu
+list(APPEND CMAKE_PREFIX_PATH "${CMAKE_SOURCE_DIR}/../fltk/install")
 find_package(FLTK CONFIG REQUIRED)
 
-# executable
-add_executable(ppp_gui_app
+add_executable(GUI-PPP2-main
     main.cpp
     GUI-PPP2/Window.cpp
     GUI-PPP2/Graph.cpp
     GUI-PPP2/GUI.cpp
 )
 
-# GUI-PPP2 headers
-target_include_directories(ppp_gui_app PRIVATE
+target_include_directories(GUI-PPP2-main PRIVATE
     ${CMAKE_SOURCE_DIR}/GUI-PPP2
 )
 
-# FLTK — WŁAŚCIWE TARGETY
-target_link_libraries(ppp_gui_app PRIVATE
+target_link_libraries(GUI-PPP2-main PRIVATE
     fltk
     fltk_images
-    ws2_32
-    comctl32
-    gdi32
-    ole32
-    uuid
 )
 
-# (opcjonalnie OpenGL)
-# target_link_libraries(ppp_gui_app PRIVATE fltk_gl)
-
-# Windows system libs
 if (WIN32)
-    target_link_libraries(ppp_gui_app PRIVATE
+    target_link_libraries(GUI-PPP2-main PRIVATE
         ws2_32
         comctl32
         gdi32
@@ -45,4 +33,3 @@ if (WIN32)
         uuid
     )
 endif()
-
